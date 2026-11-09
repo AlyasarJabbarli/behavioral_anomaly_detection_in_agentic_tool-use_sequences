@@ -9,7 +9,7 @@ LLM agents act on the world through tool calls: e-mail, files, payments, code ex
 | Tool | Link |
 |---|---|
 | Written work (Overleaf) | [Milestone 1 report](https://www.overleaf.com/project/6af1b356f37baa6f78a764ce/share#7c17041313f69665b6863f05e30742edf111092825db4a74) |
-| Reference library (Zotero) | _add link_ |
+| Reference library (Zotero) | [Agentic Anomaly Detection group](https://www.zotero.org/groups/6754519/agentic_anomaly_detection) |
 | Task board (GitHub Projects) | [T1 Semester Board](https://github.com/users/AlyasarJabbarli/projects/5) |
 
 ## Objectives
