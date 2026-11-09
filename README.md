@@ -8,9 +8,9 @@ LLM agents act on the world through tool calls: e-mail, files, payments, code ex
 ## Project links
 | Tool | Link |
 |---|---|
-| Written work (Overleaf) | _add link_ |
+| Written work (Overleaf) | [Milestone 1 report](https://www.overleaf.com/project/6af1b356f37baa6f78a764ce/share#7c17041313f69665b6863f05e30742edf111092825db4a74) |
 | Reference library (Zotero) | _add link_ |
-| Task board (GitHub Projects) | _add link_ |
+| Task board (GitHub Projects) | [T1 Semester Board](https://github.com/users/AlyasarJabbarli/projects/5) |
 
 ## Objectives
 1. Define a representation for agent trajectories: tool names, order, and coarse argument features.
