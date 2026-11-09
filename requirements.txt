@@ -1,0 +1,9 @@
+# Core (pin versions once experiments start)
+numpy
+pandas
+scikit-learn
+matplotlib
+jupyter
+pyyaml
+# Deep sequence models (Milestone 4)
+torch
