@@ -245,18 +245,19 @@ Table~\ref{tab:keypapers} lists the ten papers that will be reviewed in depth in
 \toprule
 \textbf{Group} & \textbf{Paper} & \textbf{Role in the project} \\
 \midrule
-Detection methods & Forrest et al.\ 1996 \citep{forrest1996sense} & n-gram baseline on system-call sequences (family B) \\[3pt]
+Attacks & AgentPoison, Chen et al.\ 2024 \citep{chen2024agentpoison} & Threat visible only through behavior \\
+\midrule
+Benchmarks & AgentDojo, Debenedetti et al.\ 2024 \citep{debenedetti2024agentdojo} & Main candidate trace source (e-mail, banking, travel) \\[3pt]
+ & ASB, Zhang et al.\ 2025 \citep{zhang2025asb} & Second trace source; 10 domains, 400+ tools \\
+\midrule
+Detection & Forrest et al.\ 1996 \citep{forrest1996sense} & n-gram baseline on system-call sequences (family B) \\[3pt]
  & DeepLog, Du et al.\ 2017 \citep{du2017deeplog} & LSTM next-event baseline (family D) \\[3pt]
  & LogBERT, Guo et al.\ 2021 \citep{guo2021logbert} & Transformer-based sequence detector (family D) \\[3pt]
  & TraceAegis, Liu et al.\ 2025 \citep{liu2025traceaegis} & Anomaly detection over agent tool-call traces (family E) \\[3pt]
  & LlamaFirewall, Chennabasappa et al.\ 2025 \citep{chennabasappa2025llamafirewall} & LLM-based monitor of agent reasoning (family F) \\[3pt]
  & SHADE-Arena, Kutasov et al.\ 2025 \citep{kutasov2025shade} & LLM monitors on long sabotage transcripts (family F) \\
 \midrule
-Attacks and benchmarks & AgentDojo, Debenedetti et al.\ 2024 \citep{debenedetti2024agentdojo} & Main candidate trace source (e-mail, banking, travel) \\[3pt]
- & ASB, Zhang et al.\ 2025 \citep{zhang2025asb} & Second trace source; 10 domains, 400+ tools \\[3pt]
- & AgentPoison, Chen et al.\ 2024 \citep{chen2024agentpoison} & Threat visible only through behavior \\
-\midrule
-Prevention & CaMeL, Debenedetti et al.\ 2025 \citep{debenedetti2025camel} & Design-level alternative; motivates detection \\
+Defence & CaMeL, Debenedetti et al.\ 2025 \citep{debenedetti2025camel} & Design-level alternative; motivates detection \\
 \bottomrule
 \end{tabularx}
 \caption{Papers selected for in-depth review, grouped by role.}
@@ -364,7 +365,7 @@ Behavioral anomaly detection over tool calls is relevant wherever agents act wit
   \item \textbf{Semi-supervised (one-class) detection,} with labelled attacks used only for evaluation. Normal traces are cheap to generate, while the space of attacks is open-ended; training only on normal data avoids overfitting to known attacks.
   \item \textbf{Both whole-trace and prefix (online) scoring,} so that the project can measure how early in a trajectory an anomaly is detected, which determines whether a harmful action could be blocked in time.
   \item \textbf{Several workflows,} to test how well a baseline transfers across task types and how false alarms behave when legitimate variability differs between workflows, as required by the project objectives.
-  \item \textbf{Comparison of method families} B, C, and D from Section~\ref{sec:methods}, with simple rules (A) as a baseline and an LLM monitor (F) as an optional reference point if budget allows.
+  \item \textbf{Comparison of method families} B, D and F from Section~\ref{sec:methods}, using four baselines: an n-gram or Markov detector (B), an LSTM next-call predictor and a Transformer detector (D), and an LLM monitor (F). Isolation Forest and one-class SVM (C) and simple rules (A) are kept as optional reference points. This scope was refined in Milestone~2 after reading the key papers (Section~\ref{sec:keypapers}).
   \item \textbf{Evaluation} with detection metrics (precision, recall, F1, ROC-AUC), FPR at fixed recall, and detection delay (number of steps before the first harmful action).
 \end{itemize}
 
